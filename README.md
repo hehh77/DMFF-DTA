@@ -30,12 +30,12 @@ python main.py
 ```
 
 ## Requirements
-networkx==3.1
-numpy==1.24.3
-pandas==1.5.3
-rdkit==2022.03.2
-scikit_learn==1.3.0
-scipy==1.10.1
-torch==1.12.1
-torch_geometric==2.3.1
-tqdm==4.65.0
+- networkx==3.1
+- numpy==1.24.3
+- pandas==1.5.3
+- rdkit==2022.03.2
+- scikit_learn==1.3.0
+- scipy==1.10.1
+- torch==1.12.1
+- torch_geometric==2.3.1
+- tqdm==4.65.0
