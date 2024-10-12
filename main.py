@@ -380,6 +380,15 @@ for fold, (train_indices, test_indices) in enumerate(kf.split(dataset)):
     model = DMFF(embedding_dim=256, lstm_dim=128, hidden_dim=256, dropout_rate=0.2,
                     alpha=0.2, n_heads=8, bilstm_layers=2, protein_vocab=26,
                     smile_vocab=45, theta=0.5).to(device)
+
+    # load model
+    if load_model_path is not None:
+        save_model = torch.load(load_model_path)
+        model_dict = model.state_dict()
+        state_dict = {k:v for k,v in save_model.items() if k in model_dict.keys()}
+        model_dict.update(state_dict)
+        model.load_state_dict(model_dict)
+    
     optimizer = torch.optim.Adam(model.parameters(), lr=LR)
 
     schedule = torch.optim.lr_scheduler.CosineAnnealingLR(optimizer, 20, eta_min=5e-4, last_epoch=-1)
