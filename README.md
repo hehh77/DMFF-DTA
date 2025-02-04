@@ -1,5 +1,12 @@
 # DMFF-DTA: Dual Modality Feature Fusion-based Graph Neural Network with Binding Site Contact Maps from AlphaFold2 for Accurate Drug-target Affinity Prediction
 
+# DMFF-DTA: Dual Modality Feature Fused Neural Network Integrating Binding Site Information for Drug Target Affinity Prediction
+
+DMFF-DTA is an innovative dual-modality neural network model that effectively integrates sequence and structural information from both drugs and targets to achieve accurate drug-target affinity prediction. The model addresses the scale disparity between drug molecules and proteins by introducing a binding site-focused graph construction method based on AlphaFold2.
+
+## Framework
+![DMFF-DTA Framework](figure1.png)
+
 ## File list
 - Model: The Folder contains the trained model of DMFF-DTA.
 - Vocab: The Folder contains the vocabulary files.
@@ -39,3 +46,18 @@ python main.py
 - torch==1.12.1
 - torch_geometric==2.3.1
 - tqdm==4.65.0
+
+## Citation
+If you find this work useful in your research, please consider citing:
+```bibtex
+@article{he2025dual,
+  title={Dual modality feature fused neural network integrating binding site information for drug target affinity prediction},
+  author={He, Haohuai and Chen, Guanxing and Tang, Zhenchao and Chen, Calvin Yu-Chian},
+  journal={npj Digital Medicine},
+  volume={8},
+  number={1},
+  pages={67},
+  year={2025},
+  publisher={Nature Publishing Group UK London}
+}
+```
